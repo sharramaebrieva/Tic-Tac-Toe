@@ -17,11 +17,12 @@ namespace Tic_Tac_Toe
             InitializeComponent();
         }
 
-        public sbyte player = 2;
-        public sbyte turns = 0;
+        public sbyte player = 2; //even = X turn; odd = O turn
+        public sbyte turns = 0; //counting turns
         public sbyte s1 = 0;
         public sbyte s2 = 0;
-        public sbyte sd = 0;
+        public sbyte draws = 0;
+        //counting wins for both players and draws;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -55,21 +56,76 @@ namespace Tic_Tac_Toe
                     player++;
                     turns++;
                 }
-                if(CheckDraw()==true)
+
+                if (CheckDraw() == true)
                 {
                     MessageBox.Show("Tie Game!");
-                    sd++;
+                    draws++;
                     NewGame();
+                }
+
+                if (CheckWinner() == true)
+                {
+                    if (button.Text == "X")
+                    {
+                        MessageBox.Show("X Won!");
+                        s1++;
+                        NewGame();
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("O Won!");
+                        s2++;
+                        NewGame();
+                    }
                 }
             }
         }
-        bool CheckDraw() 
+        bool CheckDraw()
         {
-            if (turns == 9)
-                return true;
-            else
-                return false;
+        if (turns == 9)
+            return true;
+        else
+            return false;
         }
+
+        bool CheckWinner()
+        {
+        //horizontal checks
+        if ((btn_bottomRight.Text == btn_bottomCenter.Text) && (btn_bottomCenter.Text == btn_bottomLeft.Text)
+            && btn_bottomRight.Text != "")
+            return true;
+        else if ((btn_centerRight.Text == btn_centerCenter.Text) && (btn_centerCenter.Text == btn_centerLeft.Text)
+            && btn_centerRight.Text != "")
+            return true;
+        else if ((btn_topRight.Text == btn_topCenter.Text) && (btn_topCenter.Text == btn_topLeft.Text)
+            && btn_topRight.Text != "")
+            return true;
+
+        //vertical checks
+        if ((btn_bottomRight.Text == btn_centerRight.Text) && (btn_centerRight.Text == btn_topRight.Text)
+            && btn_bottomRight.Text != "")
+            return true;
+        else if ((btn_bottomCenter.Text == btn_centerCenter.Text) && (btn_centerCenter.Text == btn_topCenter.Text)
+            && btn_bottomCenter.Text != "")
+            return true;
+        else if ((btn_bottomLeft.Text == btn_centerLeft.Text) && (btn_centerLeft.Text == btn_topLeft.Text)
+            && btn_bottomLeft.Text != "")
+            return true;
+
+        //diagonal checks
+        if ((btn_bottomRight.Text == btn_centerCenter.Text) && (btn_centerCenter.Text == btn_topLeft.Text)
+            && btn_bottomRight.Text != "")
+            return true;
+        else if ((btn_bottomLeft.Text == btn_centerCenter.Text) && (btn_centerCenter.Text == btn_topRight.Text)
+            && btn_bottomLeft.Text != "")
+            return true;
+        else
+            return false;
+
+        }
+        
 
         void NewGame() 
         {
