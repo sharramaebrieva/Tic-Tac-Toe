@@ -41,6 +41,11 @@ namespace Tic_Tac_Toe
             this.Settings = new System.Windows.Forms.MenuStrip();
             this.toolStripHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_NewGame = new System.Windows.Forms.Button();
+            this.btn_Reset = new System.Windows.Forms.Button();
+            this.btn_HighScore = new System.Windows.Forms.Button();
+            this.btn_Exit = new System.Windows.Forms.Button();
+            this.textBox_Score = new System.Windows.Forms.TextBox();
+            this.textBox_Draws = new System.Windows.Forms.TextBox();
             this.Settings.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -153,19 +158,69 @@ namespace Tic_Tac_Toe
             // 
             // btn_NewGame
             // 
-            this.btn_NewGame.Location = new System.Drawing.Point(12, 27);
+            this.btn_NewGame.Location = new System.Drawing.Point(12, 342);
             this.btn_NewGame.Name = "btn_NewGame";
-            this.btn_NewGame.Size = new System.Drawing.Size(80, 42);
+            this.btn_NewGame.Size = new System.Drawing.Size(60, 40);
             this.btn_NewGame.TabIndex = 10;
             this.btn_NewGame.Text = "New Game";
             this.btn_NewGame.UseVisualStyleBackColor = true;
             this.btn_NewGame.Click += new System.EventHandler(this.btn_NewGame_Click);
             // 
+            // btn_Reset
+            // 
+            this.btn_Reset.Location = new System.Drawing.Point(78, 342);
+            this.btn_Reset.Name = "btn_Reset";
+            this.btn_Reset.Size = new System.Drawing.Size(60, 40);
+            this.btn_Reset.TabIndex = 11;
+            this.btn_Reset.Text = "Reset";
+            this.btn_Reset.UseVisualStyleBackColor = true;
+            // 
+            // btn_HighScore
+            // 
+            this.btn_HighScore.Location = new System.Drawing.Point(144, 342);
+            this.btn_HighScore.Name = "btn_HighScore";
+            this.btn_HighScore.Size = new System.Drawing.Size(60, 40);
+            this.btn_HighScore.TabIndex = 12;
+            this.btn_HighScore.Text = "High Score";
+            this.btn_HighScore.UseVisualStyleBackColor = true;
+            // 
+            // btn_Exit
+            // 
+            this.btn_Exit.Location = new System.Drawing.Point(210, 342);
+            this.btn_Exit.Name = "btn_Exit";
+            this.btn_Exit.Size = new System.Drawing.Size(52, 40);
+            this.btn_Exit.TabIndex = 13;
+            this.btn_Exit.Text = "Exit";
+            this.btn_Exit.UseVisualStyleBackColor = true;
+            // 
+            // textBox_Score
+            // 
+            this.textBox_Score.Location = new System.Drawing.Point(12, 27);
+            this.textBox_Score.Name = "textBox_Score";
+            this.textBox_Score.Size = new System.Drawing.Size(80, 23);
+            this.textBox_Score.TabIndex = 14;
+            this.textBox_Score.Text = "Your Score";
+            this.textBox_Score.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox_Draws
+            // 
+            this.textBox_Draws.Location = new System.Drawing.Point(12, 55);
+            this.textBox_Draws.Name = "textBox_Draws";
+            this.textBox_Draws.Size = new System.Drawing.Size(80, 23);
+            this.textBox_Draws.TabIndex = 15;
+            this.textBox_Draws.Text = "Draws";
+            this.textBox_Draws.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(278, 348);
+            this.ClientSize = new System.Drawing.Size(278, 393);
+            this.Controls.Add(this.textBox_Draws);
+            this.Controls.Add(this.textBox_Score);
+            this.Controls.Add(this.btn_Exit);
+            this.Controls.Add(this.btn_HighScore);
+            this.Controls.Add(this.btn_Reset);
             this.Controls.Add(this.btn_NewGame);
             this.Controls.Add(this.btn_topRight);
             this.Controls.Add(this.btn_topCenter);
@@ -203,6 +258,11 @@ namespace Tic_Tac_Toe
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripHelp;
         private System.Windows.Forms.Button btn_NewGame;
+        private System.Windows.Forms.Button btn_Reset;
+        private System.Windows.Forms.Button btn_HighScore;
+        private System.Windows.Forms.Button btn_Exit;
+        private System.Windows.Forms.TextBox textBox_Score;
+        private System.Windows.Forms.TextBox textBox_Draws;
     }
 }
 
