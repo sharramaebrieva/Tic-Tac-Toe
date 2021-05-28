@@ -39,17 +39,13 @@ namespace Tic_Tac_Toe
             this.btn_topCenter = new System.Windows.Forms.Button();
             this.btn_topLeft = new System.Windows.Forms.Button();
             this.Settings = new System.Windows.Forms.MenuStrip();
-            this.toolstripMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenu_Resume = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenu_NewGame = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenu_ChoosePlayer = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenu_Exit = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolstripHelp = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.Settings.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_bottomLeft
             // 
+            this.btn_bottomLeft.Font = new System.Drawing.Font("Arial Rounded MT Bold", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_bottomLeft.Location = new System.Drawing.Point(12, 256);
             this.btn_bottomLeft.Name = "btn_bottomLeft";
             this.btn_bottomLeft.Size = new System.Drawing.Size(80, 80);
@@ -59,6 +55,7 @@ namespace Tic_Tac_Toe
             // 
             // btn_bottomCenter
             // 
+            this.btn_bottomCenter.Font = new System.Drawing.Font("Arial Rounded MT Bold", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_bottomCenter.Location = new System.Drawing.Point(98, 256);
             this.btn_bottomCenter.Name = "btn_bottomCenter";
             this.btn_bottomCenter.Size = new System.Drawing.Size(80, 80);
@@ -68,6 +65,7 @@ namespace Tic_Tac_Toe
             // 
             // btn_bottomRight
             // 
+            this.btn_bottomRight.Font = new System.Drawing.Font("Arial Rounded MT Bold", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_bottomRight.Location = new System.Drawing.Point(184, 256);
             this.btn_bottomRight.Name = "btn_bottomRight";
             this.btn_bottomRight.Size = new System.Drawing.Size(80, 80);
@@ -77,6 +75,7 @@ namespace Tic_Tac_Toe
             // 
             // btn_centerRight
             // 
+            this.btn_centerRight.Font = new System.Drawing.Font("Arial Rounded MT Bold", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_centerRight.Location = new System.Drawing.Point(184, 170);
             this.btn_centerRight.Name = "btn_centerRight";
             this.btn_centerRight.Size = new System.Drawing.Size(80, 80);
@@ -86,6 +85,7 @@ namespace Tic_Tac_Toe
             // 
             // btn_centerCenter
             // 
+            this.btn_centerCenter.Font = new System.Drawing.Font("Arial Rounded MT Bold", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_centerCenter.Location = new System.Drawing.Point(98, 170);
             this.btn_centerCenter.Name = "btn_centerCenter";
             this.btn_centerCenter.Size = new System.Drawing.Size(80, 80);
@@ -95,6 +95,7 @@ namespace Tic_Tac_Toe
             // 
             // btn_centerLeft
             // 
+            this.btn_centerLeft.Font = new System.Drawing.Font("Arial Rounded MT Bold", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_centerLeft.Location = new System.Drawing.Point(12, 170);
             this.btn_centerLeft.Name = "btn_centerLeft";
             this.btn_centerLeft.Size = new System.Drawing.Size(80, 80);
@@ -104,6 +105,7 @@ namespace Tic_Tac_Toe
             // 
             // btn_topRight
             // 
+            this.btn_topRight.Font = new System.Drawing.Font("Arial Rounded MT Bold", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_topRight.Location = new System.Drawing.Point(184, 84);
             this.btn_topRight.Name = "btn_topRight";
             this.btn_topRight.Size = new System.Drawing.Size(80, 80);
@@ -113,6 +115,7 @@ namespace Tic_Tac_Toe
             // 
             // btn_topCenter
             // 
+            this.btn_topCenter.Font = new System.Drawing.Font("Arial Rounded MT Bold", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_topCenter.Location = new System.Drawing.Point(98, 84);
             this.btn_topCenter.Name = "btn_topCenter";
             this.btn_topCenter.Size = new System.Drawing.Size(80, 80);
@@ -122,6 +125,7 @@ namespace Tic_Tac_Toe
             // 
             // btn_topLeft
             // 
+            this.btn_topLeft.Font = new System.Drawing.Font("Arial Rounded MT Bold", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_topLeft.Location = new System.Drawing.Point(12, 84);
             this.btn_topLeft.Name = "btn_topLeft";
             this.btn_topLeft.Size = new System.Drawing.Size(80, 80);
@@ -132,8 +136,7 @@ namespace Tic_Tac_Toe
             // Settings
             // 
             this.Settings.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolstripMenu,
-            this.toolstripHelp});
+            this.toolStripHelp});
             this.Settings.Location = new System.Drawing.Point(0, 0);
             this.Settings.Name = "Settings";
             this.Settings.Size = new System.Drawing.Size(278, 24);
@@ -141,47 +144,11 @@ namespace Tic_Tac_Toe
             this.Settings.Text = "Settings";
             this.Settings.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.Settings_ItemClicked);
             // 
-            // toolstripMenu
+            // toolStripHelp
             // 
-            this.toolstripMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenu_Resume,
-            this.toolStripMenu_NewGame,
-            this.toolStripMenu_ChoosePlayer,
-            this.toolStripMenu_Exit});
-            this.toolstripMenu.Name = "toolstripMenu";
-            this.toolstripMenu.Size = new System.Drawing.Size(50, 20);
-            this.toolstripMenu.Text = "Menu";
-            // 
-            // toolStripMenu_Resume
-            // 
-            this.toolStripMenu_Resume.Name = "toolStripMenu_Resume";
-            this.toolStripMenu_Resume.Size = new System.Drawing.Size(149, 22);
-            this.toolStripMenu_Resume.Text = "Resume";
-            // 
-            // toolStripMenu_NewGame
-            // 
-            this.toolStripMenu_NewGame.Name = "toolStripMenu_NewGame";
-            this.toolStripMenu_NewGame.Size = new System.Drawing.Size(149, 22);
-            this.toolStripMenu_NewGame.Text = "New Game";
-            // 
-            // toolStripMenu_ChoosePlayer
-            // 
-            this.toolStripMenu_ChoosePlayer.Name = "toolStripMenu_ChoosePlayer";
-            this.toolStripMenu_ChoosePlayer.Size = new System.Drawing.Size(149, 22);
-            this.toolStripMenu_ChoosePlayer.Text = "Choose Player";
-            // 
-            // toolStripMenu_Exit
-            // 
-            this.toolStripMenu_Exit.Name = "toolStripMenu_Exit";
-            this.toolStripMenu_Exit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.toolStripMenu_Exit.Size = new System.Drawing.Size(149, 22);
-            this.toolStripMenu_Exit.Text = "Exit";
-            // 
-            // toolstripHelp
-            // 
-            this.toolstripHelp.Name = "toolstripHelp";
-            this.toolstripHelp.Size = new System.Drawing.Size(44, 20);
-            this.toolstripHelp.Text = "Help";
+            this.toolStripHelp.Name = "toolStripHelp";
+            this.toolStripHelp.Size = new System.Drawing.Size(44, 20);
+            this.toolStripHelp.Text = "Help";
             // 
             // Form1
             // 
@@ -221,13 +188,8 @@ namespace Tic_Tac_Toe
         private System.Windows.Forms.Button btn_topCenter;
         private System.Windows.Forms.Button btn_topLeft;
         private System.Windows.Forms.MenuStrip Settings;
-        private System.Windows.Forms.ToolStripMenuItem toolstripMenu;
-        private System.Windows.Forms.ToolStripMenuItem toolstripHelp;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenu_NewGame;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenu_Resume;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenu_ChoosePlayer;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenu_Exit;
+        private System.Windows.Forms.ToolStripMenuItem toolStripHelp;
     }
 }
 
