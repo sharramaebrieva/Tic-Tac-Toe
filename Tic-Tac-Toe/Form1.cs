@@ -54,9 +54,35 @@ namespace Tic_Tac_Toe
                     button.Text = "O";
                     player++;
                     turns++;
-
+                }
+                if(CheckDraw()==true)
+                {
+                    MessageBox.Show("Tie Game!");
+                    sd++;
+                    NewGame();
                 }
             }
+        }
+        bool CheckDraw() 
+        {
+            if (turns == 9)
+                return true;
+            else
+                return false;
+        }
+
+        void NewGame() 
+        {
+            player = 2;
+            turns = 0;
+            btn_bottomRight.Text = btn_bottomCenter.Text = btn_bottomLeft.Text = btn_centerRight.Text =
+                btn_centerCenter.Text = btn_centerLeft.Text = btn_topRight.Text = btn_topCenter.Text =
+                btn_topLeft.Text = "";
+        }
+
+        private void btn_NewGame_Click(object sender, EventArgs e)
+        {
+            NewGame();
         }
     }
 }

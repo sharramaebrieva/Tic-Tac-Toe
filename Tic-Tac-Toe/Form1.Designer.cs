@@ -40,6 +40,7 @@ namespace Tic_Tac_Toe
             this.btn_topLeft = new System.Windows.Forms.Button();
             this.Settings = new System.Windows.Forms.MenuStrip();
             this.toolStripHelp = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_NewGame = new System.Windows.Forms.Button();
             this.Settings.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -150,11 +151,22 @@ namespace Tic_Tac_Toe
             this.toolStripHelp.Size = new System.Drawing.Size(44, 20);
             this.toolStripHelp.Text = "Help";
             // 
+            // btn_NewGame
+            // 
+            this.btn_NewGame.Location = new System.Drawing.Point(12, 27);
+            this.btn_NewGame.Name = "btn_NewGame";
+            this.btn_NewGame.Size = new System.Drawing.Size(80, 42);
+            this.btn_NewGame.TabIndex = 10;
+            this.btn_NewGame.Text = "New Game";
+            this.btn_NewGame.UseVisualStyleBackColor = true;
+            this.btn_NewGame.Click += new System.EventHandler(this.btn_NewGame_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(278, 348);
+            this.Controls.Add(this.btn_NewGame);
             this.Controls.Add(this.btn_topRight);
             this.Controls.Add(this.btn_topCenter);
             this.Controls.Add(this.btn_topLeft);
@@ -190,6 +202,7 @@ namespace Tic_Tac_Toe
         private System.Windows.Forms.MenuStrip Settings;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripHelp;
+        private System.Windows.Forms.Button btn_NewGame;
     }
 }
 
