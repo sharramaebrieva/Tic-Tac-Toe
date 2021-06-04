@@ -24,10 +24,7 @@ namespace Tic_Tac_Toe
         public sbyte draws = 0;
         //counting wins for both players and draws;
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
+     
 
         private void Settings_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
@@ -84,10 +81,10 @@ namespace Tic_Tac_Toe
         }
         bool CheckDraw()
         {
-        if (turns == 9)
-            return true;
-        else
-            return false;
+            if ((turns == 9) && CheckWinner() == false)
+                return true;
+            else
+                return false;
         }
 
         bool CheckWinner()
@@ -134,11 +131,38 @@ namespace Tic_Tac_Toe
             btn_bottomRight.Text = btn_bottomCenter.Text = btn_bottomLeft.Text = btn_centerRight.Text =
                 btn_centerCenter.Text = btn_centerLeft.Text = btn_topRight.Text = btn_topCenter.Text =
                 btn_topLeft.Text = "";
+
+            XWins.Text = "XWins: " + s1;
+            OWins.Text = "OWins: " + s2;
+            DrawScore.Text = ": " + draws;
         }
 
         private void btn_NewGame_Click(object sender, EventArgs e)
         {
             NewGame();
+        }
+
+        void Reset()
+        {
+            s1 = s2 = draws = 0;
+            NewGame();
+        }
+
+        private void btn_Reset_Click(object sender, EventArgs e)
+        {
+            Reset();
+        }
+
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            XWins.Text = "XWins: " + s1;
+            OWins.Text = "OWins: " + s2;
+            DrawScore.Text = ": " + draws;
         }
     }
 }
