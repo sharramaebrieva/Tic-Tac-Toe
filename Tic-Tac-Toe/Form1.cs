@@ -56,7 +56,7 @@ namespace Tic_Tac_Toe
 
                 if (CheckDraw() == true)
                 {
-                    MessageBox.Show("Tie Game!");
+                    MessageBox.Show("Tie Game! Play again and continue the fun!");
                     draws++;
                     NewGame();
                 }
@@ -65,14 +65,14 @@ namespace Tic_Tac_Toe
                 {
                     if (button.Text == "X")
                     {
-                        MessageBox.Show("X Won!");
+                        MessageBox.Show("X Won! Nice one!");
                         s1++;
                         NewGame();
                     }
 
                     else
                     {
-                        MessageBox.Show("O Won!");
+                        MessageBox.Show("O Won! Well done!");
                         s2++;
                         NewGame();
                     }

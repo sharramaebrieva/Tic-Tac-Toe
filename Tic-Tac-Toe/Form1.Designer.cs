@@ -29,6 +29,7 @@ namespace Tic_Tac_Toe
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btn_bottomLeft = new System.Windows.Forms.Button();
             this.btn_bottomCenter = new System.Windows.Forms.Button();
             this.btn_bottomRight = new System.Windows.Forms.Button();
@@ -143,6 +144,7 @@ namespace Tic_Tac_Toe
             // 
             // Settings
             // 
+            this.Settings.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.Settings.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripHelp});
             this.Settings.Location = new System.Drawing.Point(0, 0);
@@ -160,32 +162,41 @@ namespace Tic_Tac_Toe
             // 
             // btn_NewGame
             // 
+            this.btn_NewGame.BackColor = System.Drawing.Color.Yellow;
+            this.btn_NewGame.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_NewGame.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_NewGame.Location = new System.Drawing.Point(12, 342);
             this.btn_NewGame.Name = "btn_NewGame";
             this.btn_NewGame.Size = new System.Drawing.Size(80, 40);
             this.btn_NewGame.TabIndex = 10;
             this.btn_NewGame.Text = "New Game";
-            this.btn_NewGame.UseVisualStyleBackColor = true;
+            this.btn_NewGame.UseVisualStyleBackColor = false;
             this.btn_NewGame.Click += new System.EventHandler(this.btn_NewGame_Click);
             // 
             // btn_Reset
             // 
+            this.btn_Reset.BackColor = System.Drawing.Color.Lime;
+            this.btn_Reset.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Reset.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_Reset.Location = new System.Drawing.Point(98, 341);
             this.btn_Reset.Name = "btn_Reset";
             this.btn_Reset.Size = new System.Drawing.Size(80, 40);
             this.btn_Reset.TabIndex = 11;
             this.btn_Reset.Text = "Reset";
-            this.btn_Reset.UseVisualStyleBackColor = true;
+            this.btn_Reset.UseVisualStyleBackColor = false;
             this.btn_Reset.Click += new System.EventHandler(this.btn_Reset_Click);
             // 
             // btn_Exit
             // 
+            this.btn_Exit.BackColor = System.Drawing.Color.Tomato;
+            this.btn_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Exit.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_Exit.Location = new System.Drawing.Point(184, 342);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Size = new System.Drawing.Size(78, 40);
             this.btn_Exit.TabIndex = 13;
             this.btn_Exit.Text = "Exit";
-            this.btn_Exit.UseVisualStyleBackColor = true;
+            this.btn_Exit.UseVisualStyleBackColor = false;
             this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
             // textBox_Score
@@ -240,6 +251,7 @@ namespace Tic_Tac_Toe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(278, 393);
             this.Controls.Add(this.OWins);
             this.Controls.Add(this.XWins);
